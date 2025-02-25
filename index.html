@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="kanban-container">
+        <div class="kanban-column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>A Fazer</h2>
+            <div id="todo-tasks" class="kanban-tasks">
+                <!-- As tarefas serão inseridas aqui -->
+            </div>
+            <input type="text" id="todo-input" placeholder="Nova tarefa">
+            <button onclick="addTask('todo')">Adicionar</button>
+        </div>
+
+        <div class="kanban-column" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Em Progresso</h2>
+            <div id="in-progress-tasks" class="kanban-tasks">
+                <!-- As tarefas serão inseridas aqui -->
+            </div>
+        </div>
+
+        <div class="kanban-column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Concluído</h2>
+            <div id="done-tasks" class="kanban-tasks">
+                <!-- As tarefas serão inseridas aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
